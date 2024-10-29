@@ -207,5 +207,190 @@ Ketika angka 4 dimasukkan sebagai output dari perintah tersebut, hasil yang dita
 ![image](https://github.com/user-attachments/assets/d39dd14b-cf12-4ab6-983b-d163eb2da49e)
 
 "bilangan 4"
+<br> <hr>
+
+<h2>9. Form Input</h2>
+
+    <html>
+    <head>
+        <title>Contoh if-else</title>
+        <script language="javascript">
+        function test() {
+            var val1 = document.kirim.T1.value; // Ganti 'ver' dengan 'var'
+            if (val1 % 2 == 0)
+                document.kirim.T2.value = "bilangan genap";
+            else
+                document.kirim.T2.value = "bilangan ganjil";
+        }
+        </script>
+    </head>
+    <body>
+        <form method="POST" name="kirim">
+            <p>BIL <input type="text" name="T1" size="20"> <!-- Ganti T2 dengan T1 -->
+            MERUPAKAN BIL <input type="text" name="T2" size="20"></p>
+            <p><input type="button" value="TEBAK" name="B1" onclick="test()"></p> <!-- Tambahkan tanda kutip -->
+        </form>
+    </body>
+    </html>
+
+![image](https://github.com/user-attachments/assets/2afad38e-1200-434a-9a2f-99344e431f51)
+
+Kode ini memeriksa apakah nilai yang dimasukkan pada kotak input pertama (T1) merupakan bilangan genap atau ganjil. Saat tombol "TEBAK" ditekan, hasilnya akan ditampilkan di kotak input kedua (T2) dengan keterangan "bilangan genap" atau "bilangan ganjil".
+<br> <hr>
+
+<h2>10. from button</h2>
+
+    <html>
+    <head>
+        <title>objek document</title>
+    </head>
+    <body>
+        <script language="javascript">
+            function ubahWarnaLB(warna) {
+                document.bgColor = warna;
+            }
+            function ubahWarnaLD(warna) {
+                document.fgColor = warna;
+            }
+            </script>
+            <h1>tes</h1>
+            <form>
+                <input type="button" value="Latar Belakang Hijau" onclick="ubahWarnaLB('GREEN')">
+                <input type="button" value="Latar Belakang Putih" onclick="ubahWarnaLB('WHITE')">
+                <input type="button" value="Teks Kuning" onclick="ubahWarnaLD('YELLOW')">
+                <input type="button" value="Teks Biru" onclick="ubahWarnaLD('BLUE')">
+            </form>
+            <script language = "javascript">
+                document.write("Dimodifikasi terakhir pada " +
+                document.lastModified);
+            </script>
+    </body>
+    </html>
+
+![image](https://github.com/user-attachments/assets/cf8ea8b8-7f13-4ddc-8c7b-509852b86c73)
+![image](https://github.com/user-attachments/assets/d1175f60-f83c-4c52-ad38-016e024ccc84)
+![image](https://github.com/user-attachments/assets/6a87d819-db51-436f-a93f-e54df76e715f)
+![image](https://github.com/user-attachments/assets/4008d309-7478-41bd-91a0-ce6b904798d1)
+![image](https://github.com/user-attachments/assets/735ac4b2-088f-4643-8be7-5515014d689c)
+
+Kode ini menyediakan tombol untuk mengganti warna latar belakang dan warna teks pada halaman. Fungsi `ubahWarnaLB` digunakan untuk mengubah warna latar belakang (bgColor), sedangkan fungsi `ubahWarnaLD` digunakan untuk mengubah warna teks (fgColor). Tombol yang tersedia memungkinkan pengguna untuk memilih warna latar belakang hijau atau putih serta warna teks kuning atau biru. Di bagian bawah halaman, `document.write` menampilkan informasi tentang terakhir kali halaman dimodifikasi menggunakan `document.lastModified`.
+<br> <hr>
+
+<h2>11. HTML DOM</h2>
+
+    <!--
+    File: daftar_menu.html
+    -->
+    <html>
+    <head>
+        <title>Daftar Menu</title>
+        <script>
+            function hitung(ele) {
+                var total = document.getElementById('total').value;
+                total = (total ? parseInt(total) : 0);
+                var harga = 0;
+    
+                if (ele.checked) {
+                    harga = ele.value;
+                    total += parseInt(harga);
+                } else {
+                    harga = ele.value;
+                    if (total > 0)
+                        total -= parseInt(harga);
+                }
+    
+                document.getElementById('total').value = total;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Daftar Menu Makanan</h1>
+        <label><input type="checkbox" value="5000" id="menu1" onclick="hitung(this);"> Ayam Goreng Rp. 5.000</label><br />
+        <label><input type="checkbox" value="500" id="menu2" onclick="hitung(this);"> Tempe Goreng Rp. 500</label><br />
+        <label><input type="checkbox" value="2500" id="menu3" onclick="hitung(this);"> Telur Dadar Rp. 2.500</label><hr />
+        <strong>Total Bayar: Rp. <input id="total" type="text" /></strong>
+    </body>
+    </html>
+
+![image](https://github.com/user-attachments/assets/ac0a3c4a-f14e-42c3-b078-ec2da3054e6b)
+
+Kode ini menampilkan daftar menu makanan dengan checkbox untuk memilih item dan menghitung total harga. Fungsi `hitung` akan menambah atau mengurangi harga dari item yang dipilih atau dibatalkan, kemudian memperbarui nilai total di kotak input total. Setiap checkbox memiliki nilai harga sesuai dengan itemnya, dan saat dipilih, total harga akan diperbarui secara langsung di halaman.
+<br> <hr>
+
+<h1>Pertanyaan dan Tugas</h1>
+<h2>1. Buat script untuk melakukan validasi pada isian form.</h2>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validasi Form</title>
+        <script>
+            function validateForm() {
+                // Mengambil nilai dari input
+                var name = document.forms["myForm"]["name"].value;
+                var email = document.forms["myForm"]["email"].value;
+                var phone = document.forms["myForm"]["phone"].value;
+
+            // Validasi Nama
+            if (name === "") {
+                alert("Nama harus diisi.");
+                return false;
+            }
+
+            // Validasi Email
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex untuk validasi email
+            if (email === "") {
+                alert("Email harus diisi.");
+                return false;
+            } else if (!emailPattern.test(email)) {
+                alert("Email tidak valid.");
+                return false;
+            }
+
+            // Validasi Nomor Telepon
+            var phonePattern = /^[0-9]+$/; // Regex untuk validasi nomor telepon
+            if (phone === "") {
+                alert("Nomor telepon harus diisi.");
+                return false;
+            } else if (!phonePattern.test(phone)) {
+                alert("Nomor telepon hanya boleh berupa angka.");
+                return false;
+            }
+
+            // Jika semua validasi berhasil
+            alert("Form berhasil dikirim!");
+            return true; // Mengizinkan form untuk disubmit
+        }
+    </script>
+    </head>
+    <body>
+        <h1>Formulir Pendaftaran Lomba Informatika 2024 </h1>
+        <form name="myForm" onsubmit="return validateForm()">
+            <label for="name">Nama:</label><br>
+            <input type="text" name="name"><br><br>
+            
+        <label for="email">Email:</label><br>
+        <input type="text" name="email"><br><br>
+        
+        <label for="phone">Nomor Telepon:</label><br>
+        <input type="text" name="phone"><br><br>
+        
+        <input type="submit" value="Kirim">
+    </form>
+    </body>
+    </html>
+
+![image](https://github.com/user-attachments/assets/f745e0d9-931b-4077-8952-9a33db8e720f)
+![image](https://github.com/user-attachments/assets/89d5a3ed-73f1-4261-8004-62237c9877e8)
+
+Fungsi validateForm(): Fungsi ini dijalankan saat form disubmit. Ia mengambil nilai dari input dan melakukan validasi.
+Validasi Nama: Memastikan bahwa kolom nama tidak kosong.
+Validasi Email: Memastikan kolom email tidak kosong dan memenuhi pola email yang benar menggunakan regular expression (regex).
+Validasi Nomor Telepon: Memastikan kolom nomor telepon tidak kosong dan hanya berisi angka.
+Menggunakan alert: Jika ada kesalahan dalam input, pengguna akan diberi tahu melalui pesan alert.
+Mengizinkan atau Mencegah Pengiriman Form: Jika semua validasi berhasil, form akan disubmit; jika tidak, pengiriman akan dibatalkan.
+
 
 
