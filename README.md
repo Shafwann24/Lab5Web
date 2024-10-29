@@ -16,12 +16,14 @@
     </html>
 
 ![image](https://github.com/user-attachments/assets/88e82f44-7e77-4adb-b1d9-c89aa5ed57ca)
+
 Kode JavaScript ini menggunakan `document.write` untuk menampilkan "Hello World" langsung di halaman web, sementara `console.log` mencetak teks tersebut di konsol browser. `document.write` berguna untuk menampilkan konten di halaman, sedangkan `console.log` bermanfaat untuk debugging tanpa memengaruhi tampilan halaman.
 <br> <hr>
 
 2. <h2>2. Pemakaian Alert sebagai property window.</h2>
 
 ![image](https://github.com/user-attachments/assets/7d399d55-fb52-4ce5-874e-8359455c8d85)
+
 Kode JavaScript ini memakai `window.alert` untuk menampilkan kotak pesan (alert box) yang berisi teks "ini merupakan pesan untuk anda" begitu halaman dimuat. Pengguna harus menutup kotak pesan ini agar dapat melanjutkan interaksi dengan halaman.
 <br> <hr>
 
