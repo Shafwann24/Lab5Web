@@ -68,7 +68,7 @@ Kode JavaScript ini menampilkan teks "selamat mencoba javascript" diikuti dengan
 
 ![image](https://github.com/user-attachments/assets/c861ea9e-1707-413d-bef6-52a35fca0ab8)
 Setelah perintah tadi lalu muncul seperti gambar diatas, lalu ketik "nama Dhean Shafwan" lalu akan muncul seperti gambar dibawah ini
-<hr>
+<br>
 
 ![image](https://github.com/user-attachments/assets/66ade576-9796-4073-a15e-91447191f2af)
 nah jadi seperti yang diatas
