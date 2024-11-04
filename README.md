@@ -22,6 +22,20 @@ Kode JavaScript ini menggunakan `document.write` untuk menampilkan "Hello World"
 
 <h2>2. Pemakaian Alert sebagai property window.</h2>
 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>alert box</title>
+    </head>
+    <body>
+        <script language = "Javascript">
+            window.alert("ini merupakan pesan untuk anda");
+        </script>
+    </body>
+</html>
+
 ![image](https://github.com/user-attachments/assets/7d399d55-fb52-4ce5-874e-8359455c8d85)
 
 Kode JavaScript ini memakai `window.alert` untuk menampilkan kotak pesan (alert box) yang berisi teks "ini merupakan pesan untuk anda" begitu halaman dimuat. Pengguna harus menutup kotak pesan ini agar dapat melanjutkan interaksi dengan halaman.
